@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=KoHo:wght@300;500&display=swap" rel="stylesheet" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <script src="https://kit.fontawesome.com/69ae323611.js" crossorigin="anonymous"></script>
+    <style>
+        @media screen,
+        print {
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+                font-family: "KoHo", sans-serif;
+            }
+            @media print {
+                @page {
+                    margin: 0;
+                }
+            }
+            p {
+                font-size: 16px;
+            }
+            a {
+                list-style: none;
+                color: white;
+            }
+            .page {
+                width: 100%;
+                height: 100vh;
+            }
+            .page,
+            .home {
+                display: flex;
+                flex-direction: row;
+            }
+            .side {
+                width: 220px;
+                background-color: #1687a7;
+                color: white;
+                contain: content;
+            }
+            .side h1 {
+                font-weight: 900;
+                font-size: 38px;
+            }
+            .side .section {
+                width: 100%;
+                padding: 12px 0;
+            }
+            .side .section h3 {
+                width: 100%;
+                text-align: center;
+                padding: 6px 0;
+                background-color: #276678;
+                box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            }
+            .side .section .wrap {
+                padding: 3px 0;
+            }
+            .side .section .social-list {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .side .section .social-list a+a {
+                margin-left: 30px;
+            }
+            .side .section .social-list a {
+                font-size: 26px;
+            }
+            .section .eval-bar {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .section .eval-bar .bar {
+                width: 100%;
+                margin: 4px 0;
+                height: 10px;
+                border-radius: 5px;
+                position: relative;
+                background-color: #276678;
+                color: white;
+            }
+            .section .eval-bar .bar .after {
+                content: "";
+                position: absolute;
+                border-radius: inherit;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background-color: white;
+            }
+            .section .eval-bar .eval-word {
+                font-size: 15px;
+            }
+            .main {
+                display: flex;
+                flex-direction: column;
+                width: calc(100% - 220px);
+            }
+            .main .section {
+                width: 100%;
+            }
+            .main .section h2 {
+                padding: 6px 0 6px 4px;
+                border-top: 1px solid #ccc;
+                border-bottom: 1px solid #ccc;
+            }
+            .main .section .body {
+                display: flex;
+                padding: 12px 6px;
+            }
+            .main .section .body .date {
+                width: 100px;
+            }
+            .main .section .body .desc {
+                width: calc(100% - 100px);
+                padding: 0 6px;
+            }
+            .main ul {
+                padding-left: 18px;
+                font-size: 15px;
+            }
+            .main .section+.section {
+                padding-top: 21px;
+            }
+            span.chip {
+                display: inline-block;
+                background-color: #03565ca1;
+                border-radius: 5px;
+                padding: 2px;
+                min-width: 50px;
+                text-align: center;
+                color: white;
+            }
+            span.chip+span.chip {
+                margin-left: 3px;
+            }
+        }
+    </style>
+    <title>Resume</title>
+</head>
+
+<body>
+    <!-- this is a cool comment -->
+    <div class="page home">
+        <div class="side">
+            <h1 style="padding: 10px">Mohamed Nabil</h1>
+            <p style="padding: 4px">Software Engineering Student</p>
+            <div class="section">
+                <h3>Personal Info</h3>
+                <div class="body" style="width: 100%; padding: 10px">
+                    <div class="wrap">
+                        <h4>Phone</h4>
+                        <p>(+20) 1119549206</p>
+                    </div>
+                    <div class="wrap">
+                        <h4>E-mail</h4>
+                        <p>mahmednabil109@gmail.com</p>
+                    </div>
+                    <div class="wrap">
+                        <h4>City</h4>
+                        <p>Cairo, Egypt</p>
+                    </div>
+                </div>
+                <div class="social-list">
+                    <a target="_blank" href="https://www.linkedin.com/in/mahmed-nabil-452383140/" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a target="_blank" href="https://www.facebook.com/mahmed.nabil.33671/" target="_blank">
+                        <i class="fab fa-facebook-square"></i>
+                    </a>
+                    <a target="_blank" href="https://github.com/mahmednabil109" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="section">
+                <h3>Skills</h3>
+                <div class="body" style="padding: 10px; width: 100%">
+                    <div class="wrap">
+                        <h4>Coding</h4>
+                        <div class="eval-bar" data-value="90%">
+                            <div class="bar">
+                                <div class="after"></div>
+                            </div>
+                            <div class="eval-word" style="margin-left: auto"></div>
+                        </div>
+                    </div>
+                    <div class="wrap">
+                        <h4>Debugging</h4>
+                        <div class="eval-bar" data-value="85%">
+                            <div class="bar">
+                                <div class="after"></div>
+                            </div>
+                            <div class="eval-word" style="margin-left: auto"></div>
+                        </div>
+                    </div>
+                    <div class="wrap">
+                        <h4>Database Knowledge</h4>
+                        <div class="eval-bar" data-value="65%">
+                            <div class="bar">
+                                <div class="after"></div>
+                            </div>
+                            <div class="eval-word" style="margin-left: auto"></div>
+                        </div>
+                    </div>
+                    <div class="wrap">
+                        <h4>Problem Solving</h4>
+                        <div class="eval-bar" data-value="90%">
+                            <div class="bar">
+                                <div class="after"></div>
+                            </div>
+                            <div class="eval-word" style="margin-left: auto"></div>
+                        </div>
+                    </div>
+                    <div class="wrap">
+                        <h4>Cybersecurity</h4>
+                        <div class="eval-bar" data-value="75%">
+                            <div class="bar">
+                                <div class="after"></div>
+                            </div>
+                            <div class="eval-word" style="margin-left: auto"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main" style="padding: 10px">
+            <div class="section">
+                <h2>Education</h2>
+                <div class="body">
+                    <div class="date">2018 - 2023</div>
+                    <div class="desc">
+                        <p><strong>German University in Cairo (GUC).</strong></p>
+                        <ul>
+                            <li>CSE Bachalor Student.</li>
+                            <li>Current GPA 0.85 Category (A)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <h2>Experience</h2>
+                 <div class="body">
+                    <div class="date">2021</div>
+                    <div class="desc">
+                        <p>
+                            <strong>
+                                SoftWare Engineer Intern @
+                                <a
+                                    target="_blank"
+                                    href="https://www.linkedin.com/company/robusta-studio/mycompany/"
+                                    style="color: black"
+                                >
+                                    Robusta Studio
+                                </a>
+                            </strong>
+                        </p>
+                        <ul>
+                            <li>
+                                build an internal tool for tracking the perforamce of the employees
+                            </li>
+                            <li>
+                                <a target="_blank" style="color: black" href="https://media-exp1.licdn.com/dms/image/C4E22AQH8X3IW_yYWPw/feedshare-shrink_800/0/1634684143549?e=1637798400&v=beta&t=YgK-24bHO-7XfBhxsZCYr7Cz36qxJ-5nWKSMABurnfU">link to the certificate</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="body">
+                    <div class="date">2021</div>
+                    <div class="desc">
+                        <p>
+                            <strong>
+                  Participating in
+                  <a
+                    href="https://hackathon.tecvoiseg-vodafone.com/"
+                    style="color: black"
+                  >
+                    _VOIS Hachation
+                  </a>
+                </strong>
+                        </p>
+                        <ul>
+                            <li>
+                                build a wearable device that is capable of registering any other nearby devices so that we can build a network of people to notify if anyone has caught the Covid-19 virus.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                 <div class="body">
+                    <div class="date">2019 - 2020</div>
+                    <div class="desc">
+                        <p>
+                            <strong>
+                  Embedded SoftWare Engineer @
+                  <a
+                    href="https://www.linkedin.com/company/impulsescorp/"
+                    style="color: black"
+                  >
+                    Impulses-corp
+                  </a>
+                </strong>
+                        </p>
+                        <ul>
+                            <li>
+                                build an iot system to control the house with an application on the mobile.
+                            </li>
+                            <li>build the first website for the company.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <h2>Academic Projects</h2>
+                 <div class="body">
+                    <div class="date">2021</div>
+                    <div class="desc">
+                        <p><strong>DB Engine</strong></p>
+                        <ul>
+                            <li>academic project to implement a db engine with simple functionalities like SELECT,INSERT,DELETE,UPDATE</li>
+                            <li>we also implemented Grid Index to speedup the queries</li>
+                            <li>technologies used : <span class="chip">Java</span></li>
+                        </ul>
+                    </div>
+                </div>
+                 <div class="body">
+                    <div class="date">2021</div>
+                    <div class="desc">
+                        <p><strong>MIPS Processor Simulator</strong></p>
+                        <ul>
+                            <li>academic project to implement a variation of MIPS Micro Processor simulator to execute simple assembly programs</li>
+                            <li>technologies used : <span class="chip">Java</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="body">
+                    <div class="date">2021</div>
+                    <div class="desc">
+                        <p><strong>Obstacles Avoidance Car</strong></p>
+                        <ul>
+                            <li>build a car that scans the surroundings and then sends the data via the bluetooth to the controller to plot it and then recieve the action  to move.</li>
+                            <li>technologies used : <span class="chip">VHDL</span> <span class="chip">Java</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="body">
+                    <div class="date">2020</div>
+                    <div class="desc">
+                        <p><strong>GUCare</strong></p>
+                        <ul>
+                            <li>academic project to implement a course providing platform with Web Forsms C#.</li>
+                            <li>technologies used : <span class="chip">C#</span> <span class="chip">WebForms</span> <span class="chip">HTML</span> <span class="chip">CSS</span></li>
+                        </ul>
+                    </div>
+                </div>
+               
+            </div>
+            
+        </div>
+    </div>
+    <div class="page">
+        <div class="side">
+            
+            <div class="section">
+                <h3>Languages</h3>
+                <div class="body" style="padding: 10px; width: 100%">
+                    <div class="wrap">
+                        <h4>JavaScript</h4>
+                        <div class="eval-bar" data-value="95%">
+                            <div class="bar">
+                                <div class="after"></div>
+                            </div>
+                            <div class="eval-word" style="margin-left: auto"></div>
+                        </div>
+                    </div>
+                    <div class="wrap">
+                        <h4>Python</h4>
+                        <div class="eval-bar" data-value="90%">
+                            <div class="bar">
+                                <div class="after"></div>
+                            </div>
+                            <div class="eval-word" style="margin-left: auto"></div>
+                        </div>
+                    </div>
+                    <div class="wrap">
+                        <h4>SQL</h4>
+                        <div class="eval-bar" data-value="75%">
+                            <div class="bar">
+                                <div class="after"></div>
+                            </div>
+                            <div class="eval-word" style="margin-left: auto"></div>
+                        </div>
+                    </div>
+                    <div class="wrap">
+                        <h4>Java</h4>
+                        <div class="eval-bar" data-value="75%">
+                            <div class="bar">
+                                <div class="after"></div>
+                            </div>
+                            <div class="eval-word" style="margin-left: auto"></div>
+                        </div>
+                    </div>
+                    <div class="wrap">
+                        <h4>C++/C</h4>
+                        <div class="eval-bar" data-value="85%">
+                            <div class="bar">
+                                <div class="after"></div>
+                            </div>
+                            <div class="eval-word" style="margin-left: auto"></div>
+                        </div>
+                    </div>
+                    <div class="wrap">
+                        <h4>Assembly</h4>
+                        <div class="eval-bar" data-value="40%">
+                            <div class="bar">
+                                <div class="after"></div>
+                            </div>
+                            <div class="eval-word" style="margin-left: auto"></div>
+                        </div>
+                    </div>
+                    <div class="wrap">
+                        <h4>HTML 5</h4>
+                        <div class="eval-bar" data-value="95%">
+                            <div class="bar">
+                                <div class="after"></div>
+                            </div>
+                            <div class="eval-word" style="margin-left: auto"></div>
+                        </div>
+                    </div>
+                    <div class="wrap">
+                        <h4>CSS 3</h4>
+                        <div class="eval-bar" data-value="95%">
+                            <div class="bar">
+                                <div class="after"></div>
+                            </div>
+                            <div class="eval-word" style="margin-left: auto"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <h3>Web Technologies</h3>
+                <div class="body" style="padding: 10px; width: 100%">
+                    <div class="wrap">
+                        <h4>React</h4>
+                        <div class="eval-bar" data-value="90%">
+                            <div class="bar">
+                                <div class="after"></div>
+                            </div>
+                            <div class="eval-word" style="margin-left: auto"></div>
+                        </div>
+                    </div>
+                     <div class="wrap">
+                        <h4>VueJS</h4>
+                        <div class="eval-bar" data-value="95%">
+                            <div class="bar">
+                                <div class="after"></div>
+                            </div>
+                            <div class="eval-word" style="margin-left: auto"></div>
+                        </div>
+                    </div>
+                    <div class="wrap">
+                        <h4>NodeJS</h4>
+                        <div class="eval-bar" data-value="90%">
+                            <div class="bar">
+                                <div class="after"></div>
+                            </div>
+                            <div class="eval-word" style="margin-left: auto"></div>
+                        </div>
+                    </div>
+                    <div class="wrap">
+                        <h4>Flask</h4>
+                        <div class="eval-bar" data-value="90%">
+                            <div class="bar">
+                                <div class="after"></div>
+                            </div>
+                            <div class="eval-word" style="margin-left: auto"></div>
+                        </div>
+                    </div>
+                    <div class="wrap">
+                        <h4>Electron</h4>
+                        <div class="eval-bar" data-value="90%">
+                            <div class="bar">
+                                <div class="after"></div>
+                            </div>
+                            <div class="eval-word" style="margin-left: auto"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main" style="padding:20px 10px 10px 10px;">
+            <div class="section">
+                <h2>Freelancing  Projects</h2>
+                <div class="body">
+                    <div class="date">2021</div>
+                    <div class="desc">
+                        <p><strong>Full Managment System</strong></p>
+                        <ul>
+                            <li>a system to manage all the aspects of an online store.</li>
+                            <li>technologies used : <span class="chip">ElectronJS</span> <span class="chip">Flask</span> <span class="chip">HTML</span> <span class="chip">CSS<span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <h2>Achivements & Recognition</h2>
+                <div class="body">
+                    <div class="date">2018</div>
+                    <div class="desc">
+                        <p><strong>GUC swedey full scholarship award</strong></p>
+                        <ul>
+                            <li>awawrded with full scholarship to study in GUC 2018 - 2023</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="body">
+                    <div class="date">2018</div>
+                    <div class="desc">
+                        <p><strong>Ranked 2nd on EL-Gharbia Governorate in AL-Thanaway AL-Amma </strong></p>
+                        <ul>
+                            <li>Ranked 2nd on EL-Gharbia Governorate with 99.4% garde in Math branch 2018</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <h2>Courses & Scholarships</h2>
+                 <div class="body">
+                        <div class="date">2021</div>
+                        <div class="desc">
+                            <p><strong>Cybersecurity Scholarship with Cybertalents and TrendMicros</strong></p>
+                            <ul>
+                                <li>graduated from the TrendMicros with CyberTalents Scholarship for Ethical Hacking</li>
+                                <li><a target="_blank" href="https://drive.google.com/file/d/173bVouZOd4B0jdMwqsN9GMGagLtho5Z2/view?usp=sharing" style="color: black">link to certificate</a></li>
+                            </ul>
+                        </div>
+                </div>
+                <div class="body">
+                    <div class="date">2021</div>
+                    <div class="desc">
+                        <p><strong>Udacity Advanced Web Development</strong></p>
+                        <ul>
+                            <li>graduated from the advanced web development program offered by Egypt FWD </li>
+                            <li><a target="_blank" href="https://confirm.udacity.com/GHKEACDU" style="color:black">link to certificate</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="body">
+                    <div class="date">2020</div>
+                    <div class="desc">
+                        <p><strong>Udacity Web Development Professional</strong></p>
+                        <ul>
+                            <li>graduated from the Web Development Professional program offered by Egypt FWD </li>
+                            <li><a target="_blank" href="https://confirm.udacity.com/GFADZNHP" style="color:black">link to certificate</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section">
+                    <h2>Additional Activities</h2>
+                     <div class="body">
+                        <div class="date">2021</div>
+                        <div class="desc">
+                            <p><strong>GUC Collegie Programming Contest</strong></p>
+                            <ul>
+                                <li>we achieved the 7th place in the contest out of 26 teams</li>
+                                <li><a target="_blank" href="https://drive.google.com/file/d/13xg2u-n2VC72pwNO71RDtZHSmAkpe__8/view?usp=sharing" style="color:black">link to certificate</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="date">2020</div>
+                        <div class="desc">
+                            <p><strong>GUC Collegie Programming Contest</strong></p>
+                            <ul>
+                                <li>we achieved the 7th place in the contest out of 21 teams</li>
+                                <li><a target="_blank" href="https://drive.google.com/file/d/17hbkZjhh_WqhcdByalPLfknLNNXuyP_0/view" style="color:black">link to certificate</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="date">2020</div>
+                        <div class="desc">
+                            <p><strong>CTF player on CyberTalents</strong></p>
+                            <ul>
+                                <li>ranked the 245th world wide on cybertalents platform </li>
+                                <li><a target="_blank" href="https://cybertalents.com/members/mahmednabil109/profile" style="color:black">link to profile</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            console.log("Hello There");
+            let evalWords = {
+                    "100%": "Expert",
+                    "95%": "Advanced",
+                    "90%": "Advanced",
+                    "85%": "Advanced",
+                    "75%": "Advanced",
+                    "65%": "Intermediate",
+                    "40%": "Basics",
+                },
+                evalBars = document.querySelectorAll(".eval-bar");
+            evalBars.forEach((e) => {
+                e.querySelector(".bar .after").style.width = e.dataset.value;
+                e.querySelector(".eval-word").innerText = evalWords[e.dataset.value];
+            });
+        </script>
+</body>
+
+</html>
